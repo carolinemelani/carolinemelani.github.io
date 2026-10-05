@@ -1,0 +1,215 @@
+/* ===== Reset & Global ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f5;
+    color: #2b1b1e;
+    line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: #6b1e2b;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #f3c6c8;
+}
+
+/* ===== Hero ===== */
+.hero {
+    background-color: #4a101a;
+    color: white;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #f3c6c8;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #f3c6c8;
+    color: #4a101a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 7px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+}
+
+/* ===== Informasi Produk ===== */
+.product-info {
+    text-align: center;
+    padding: 40px 8% 10px;
+}
+
+.product-info h2 {
+    color: #6b1e2b;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a101a;
+}
+
+/* ===== Katalog Produk ===== */
+.produk {
+    padding: 40px 8% 80px;
+}
+
+.produk h2 {
+    text-align: center;
+    color: #6b1e2b;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* ===== Kartu Produk ===== */
+.product-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 5px solid #6b1e2b;
+    box-shadow: 0 4px 12px rgba(107, 30, 43, 0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(107, 30, 43, 0.2);
+}
+
+.product-card h3 {
+    color: #6b1e2b;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 8px;
+}
+
+.stock.tersedia {
+    color: #287a45;
+    font-weight: bold;
+}
+
+.stock.habis {
+    color: #b3261e;
+    font-weight: bold;
+}
+
+.product-card button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #6b1e2b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #4a101a;
+}
+
+.product-card button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #6b1e2b;
+    color: white;
+    text-align: center;
+    padding: 20px 8%;
+    font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+}
